@@ -105,9 +105,9 @@
     gap: 10px;
 }
 
-h1{
+/* h1{
     /* background-color: green; */
-}
+/* } */
 
 .bluebox{
     width: 300px;
@@ -205,4 +205,75 @@ h1{
 
 .sidebar2{
     grid-area: sb2;
+}
+
+.square{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    transition-duration: 5s;
+    transition-property: all;
+    transition-timing-function: linear;
+    /* transition-delay: 3s; */
+}
+
+.square:hover{
+    background-color: red;
+    width: 600px;
+    transform: translateX(100px);
+}
+
+.square2{
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes circle {
+    50%{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        left: 10px;
+        top: 10px;
+    }
+
+    75%{
+        width: 300px;
+        height: 300px;
+        background-color: green;
+        left: 30px;
+        top: 30px;
+    }
+
+    100%{
+        background-color: yellow;
+        width: 400px;
+        height: 400px;
+        left: 50px;
+        top: 50px;
+    }
+}
+
+@media screen  and (max-width:801px){
+    h1{
+        text-align: center;
+        color: red;
+        background-color: black;
+    }
+}
+
+@media screen  and (max-width:600px){
+    h2{
+        text-align: center;
+        color: yellowgreen;
+        background-color: gray;
+        font-size: 60px;
+    }
 }
